@@ -1,0 +1,430 @@
+// @import 'setup';
+
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+ .clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; } 
+
+ * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+@font-face {
+    font-family: STIXGeneralItalic;
+    src: url(/assets/STIXGeneralItalics.otf);
+}
+
+ .wrapper {
+	width: 80%;
+	margin: 0 auto;
+	max-width: 1280px;
+}
+
+h2 {
+	font-family: 'STIXGeneralItalic', sans-serif;
+	color: rgba(160, 199, 190, 1);
+
+}
+
+header {
+ 	background-image: url(/assets/Local-Wolves-_-Native-Other1-4.jpg);
+ 	background-size: cover;
+    background-position: center;
+    max-width: 100%;
+ 	height: 620px;
+ 	margin: 0 auto;
+ 	padding-top: 20px;
+ 	/*padding-bottom: 0;*/
+ 	margin-bottom: 10px;
+ }
+
+ nav {
+ 	position: fixed;
+ 	top: 0;
+ 	left: 0;
+ 	background: rgba(128, 128, 128, 0.10);
+ }
+
+ nav a {
+ 	display: flex;
+ 	flex-direction: column;
+ 	align-items: center;
+ 	text-transform: uppercase;
+	text-decoration: none;
+	color: lightgrey;
+	border: 1px solid grey;
+	padding: 5px;
+	font-size: 12px;
+	transition: all 0.5s ease;	
+ }
+
+ .active {
+	background-image: url(/assets/photo-1442458017215-285b83f65851.jpeg);
+}
+
+
+ .headerContent h1, .headerContent h3 {
+ 	color: rgba(160, 199, 190, 1);
+ 	display: flex;
+ 	position: fixed;
+ 	top: 0;
+ 	right: 0;
+ 	font-family: 'STIXGeneralItalic', sans-serif;
+ 	z-index: 1;
+ 	
+ }
+
+ .headerContent h1 {
+ 	margin: 10px;
+ 	padding: 20px;
+ }
+
+ .headerContent h3 {
+ 	margin: 10px;
+ 	padding: 50px;
+ }
+
+.links {
+	list-style-type: none;
+	text-decoration: none;
+	padding: 20px;
+}
+
+.links a {
+	color: rgba(160, 199, 190, 1);
+	font-weight: bold;
+	padding: 10px;
+	font-family: 'STIXGeneralItalic', sans-serif;
+	text-transform: lowercase;
+	font-size: 16px;
+}
+
+.socialLinks li {
+	color: rgb(160, 199, 190);
+	padding: 5px;
+	font-size: 25px;
+
+}
+
+i.fa-facebook-f {
+    margin-left: 4px;
+}
+
+.menuContent {
+	color: rgba(160, 199, 190, 1);
+	font-weight: bold;
+	padding: 10px;
+	font-family: 'STIXGeneralItalic', sans-serif;
+	text-transform: lowercase;
+	font-size: 16px;
+
+}
+
+.menuContent {
+	display: flex;
+ 	flex-direction: column;
+ 	align-items: center;
+ 	text-transform: uppercase;
+	text-decoration: none;
+	color: lightgrey;
+	border: 1px solid grey;
+	padding: 5px;
+	font-size: 12px;
+	transition: all 0.5s ease;	
+}
+
+.soundcloud {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 20px;
+	position:relative;
+	z-index:10;
+}
+
+.hiddenSound {
+	display: none;
+}
+
+.music {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 50px;
+
+}
+
+.music ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.music li, .music li a {
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 35px;
+	/*color: rgba(128, 128, 128);*/
+	color: rgb(160, 199, 190);
+
+}
+
+ .music ul, li, a {
+ 	list-style-type: none;
+ 	text-decoration: none;
+ 	color: black;
+ }
+
+ .visualSection {
+ 	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 30px;
+ }
+
+ .visualSection h2 {
+ 	font-family: 'STIXGeneralItalic', sans-serif;
+ }
+
+ .visualSection h3 {
+ 	font-family: 'STIXGeneralItalic', sans-serif;
+ 	color: rgb(160, 199, 190);
+ 	text-transform: capitalize;	
+ 	padding-top: 10px;
+ }
+
+ .visualSection span:hover {
+ 	background-image: url(/assets/photo-1442458017215-285b83f65851.jpeg);
+ }
+
+ .video {
+ 	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 70px;
+ }
+
+ .video iframe {
+ 	width: 560px; 
+ 	height: 315px;
+ 	position: relative;
+ 	z-index: 10;
+ }
+
+ .store {
+ 	display: flex;
+ 	flex-direction: column;
+ 	justify-content: center;
+ 	padding-top: 50px;
+ }
+
+ .store h2 {
+ 	text-align: center;
+ }
+
+.merchContainer {
+	width: 100%;
+	display:flex;
+	margin: 10px;
+}
+
+.merch {
+	width: calc(100% / 2);
+	margin-right: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.merch2 {
+	position: relative;
+	z-index: 10;
+}
+
+.merch img {
+	width: auto;
+	max-height: 350px;
+}
+
+.merch a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: grey;
+	border: 1px solid rgba(160, 199, 190, 1);
+	padding: 15px;
+	font-size: 12px;
+	transition: all 1s ease;	
+}	
+
+ .merch a:hover {
+ 	background-image: url(/assets/photo-1442458017215-285b83f65851.jpeg);
+ 	color: rgba(160, 199, 190, 1);
+}
+
+.tour {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 0;
+}
+
+.tour h2 {
+	text-align: center;
+
+}
+
+.tour ul.tourDates {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	list-style-type: none;
+	padding: 0;	
+}
+
+.tourDates li {
+	font-family: 'STIXGeneralItalic', sans-serif;
+	line-height: 40px;
+	font-size: 17px;
+	text-align: center;
+	margin: 0 auto;
+
+}
+
+.contactSection {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 60px;
+	padding-bottom: 20px;
+}
+
+.conactSection div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contactSection h2 {
+	text-align: center;
+
+}
+
+.contactSection a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: grey;
+	border: 1px solid rgba(160, 199, 190, 1);
+	padding: 10px;
+	font-size: 12px;
+    transition: all 1s ease;
+}	
+
+.contactSection a:hover {
+	background-image: url(/assets/photo-1442458017215-285b83f65851.jpeg);
+	color: rgba(160, 199, 190, 1);
+}
+
+.flickityPhotos {
+	padding: 50px;
+}
+
+.flickityPhotos h2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 30px;
+}
+
+.carousel-cell {
+  	width: 66%;
+  	height: 380px;
+  	margin: 0 auto;
+}
+
+.carousel-cell img {
+	width: 100%;
+}
+
+@media screen and ( min-width: 768px ) {
+  .carousel-cell img {
+    /*height: 400px;*/
+    width: 100%;
+  }
+}
+
+footer {
+	background-image: url(/assets/photo-1442458017215-285b83f65851.jpeg);
+	width: 100%;
+	height: 100%;
+	color: white;
+	padding: 35px;
+	margin-top: 25px;
+
+}
+
+footer h6 {
+	font-family: 'STIXGeneralItalic', sans-serif;
+	color: rgba(160, 199, 190, 1);
+	float: right;
+	margin-top: 3px;
+}
+
+@media(max-width:778px) {
+
+	.store .merchContainer {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.merch2 {
+		margin-top: 40px;
+	}
+
+
+}
+
+@media(max-width: 628px) {
+
+	.hiddenSound {
+		display: block;
+	}
+
+	.sound {
+		display: none;
+	}
+
+}
+
+@media(max-width: 628px) {
+
+	body {
+		position: relative;
+	}
+
+	nav {
+		position: absolute;
+	}
+
+	.main-carousel {
+		width: 100%;
+	}
+
+	.flickityPhotos {
+		padding: 10px;
+		width: 100%;
+	}
+
+	.visuals .wrapper {
+		width: 100%;
+	}
+	
+	.video iframe {
+		width: 100%;
+		height: 315px;
+	}
+}
+
+
